@@ -5,11 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toyqo | about page</title>
+    <meta name="description"
+        content="Learn the story behind Toyqo - where passion meets play! Discover our journey of bringing joy to families through carefully curated toys and games. Find out about our commitment to quality, safety, and fostering imagination in every child. Join us in celebrating the magic of childhood and the power of play" />
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/all.min.css" rel="stylesheet" />
     <link href="css/css.css" rel="stylesheet" />
     <link href="css/about.css" rel="stylesheet" />
-    <link rel="icon" href="photo/icon.png" type="image/x-icon" />
+    <link rel="icon" href="images/icon.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,800&display=swap"
@@ -38,21 +40,21 @@
             <div class="logo"><span>T</span><span>o</span><span>y</span><span>q</span><span>o</span></div>
             <div class="pages">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-label="home">Home</a></li>
                     <li>
-                        <a href="shop.html">Shop</a>
+                        <a href="shop.html" aria-label="shop">Shop</a>
                     </li>
                     <li>
-                        <a href="about.html" class="active">About</a>
+                        <a href="about.html" class="active" aria-label="about">About</a>
                     </li>
                     <li>
-                        <a href="blog.html"> Blog</a>
+                        <a href="blog.html" aria-label="blog"> Blog</a>
                     </li>
                     <li>
-                        <a href="faq.html">FAQ</a>
+                        <a href="faq.html" aria-label="faq">FAQ</a>
                     </li>
                     <li>
-                        <a href="contact_us.html"> Contact</a>
+                        <a href="contact_us.html" aria-label="contact"> Contact</a>
                     </li>
                 </ul>
             </div>
@@ -74,15 +76,15 @@
                         </div>
                     </li>
                     <li>
-                        <a href="viewed.html"><i class="fa-solid fa-eye"></i></a>
+                        <a href="viewed.html" aria-label="view-page"><i class="fa-solid fa-eye"></i></a>
                     </li>
                     <li>
-                        <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="cart.html" aria-label="cart-page"> <i class="fa-solid fa-cart-shopping"></i></a>
                         <span class="itemsOfCart">0</span>
                     </li>
                 </ul>
             </div>
-            <button>
+            <button aria-label="menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -109,7 +111,8 @@
         <div class="container">
             <div class="about_section">
                 <div class="img">
-                    <img src="photo/1.jpg">
+                    <img class="lazyload" loading="lazy" data-src="images/about.webp" alt="about" width="100%"
+                        height="auto">
                 </div>
                 <div class="about_info">
                     <h2>
@@ -201,7 +204,8 @@
                 <div>
                     <div class="img_container">
                         <div class="img">
-                            <img src="photo/1.png">
+                            <img loading="lazy" class="lazyload" data-src="images/1.webp" alt="team" width="100%"
+                                height="auto">
                         </div>
                         <div class="overlay">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -217,7 +221,8 @@
                 <div>
                     <div class="img_container">
                         <div class="img">
-                            <img src="photo/2.png">
+                            <img loading="lazy" class="lazyload" data-src="images/2.webp" alt="team2" width="100%"
+                                height="auto">
                         </div>
                         <div class="overlay">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -233,7 +238,8 @@
                 <div>
                     <div class="img_container">
                         <div class="img">
-                            <img src="photo/3.png">
+                            <img loading="lazy" class="lazyload" data-src="images/3.webp" alt="team3" width="100%"
+                                height="auto">
                         </div>
                         <div class="overlay">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -249,7 +255,8 @@
                 <div>
                     <div class="img_container">
                         <div class="img">
-                            <img src="photo/4.png">
+                            <img loading="lazy" class="lazyload" data-src="images/t4.webp" alt="team4" width="100%"
+                                height="auto">
                         </div>
                         <div class="overlay">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -301,17 +308,17 @@
             <div>
                 <h2>Information</h2>
                 <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Payment Methode</a></li>
-                    <li><a href="#">Product Warranty</a></li>
-                    <li><a href="#">Return Process</a></li>
+                    <li><a href="#" aria-label="terms">Terms & Conditions</a></li>
+                    <li><a href="#" aria-label="payment-methode">Payment Methode</a></li>
+                    <li><a href="#" aria-label="product-warranty">Product Warranty</a></li>
+                    <li><a href="#" aria-label="return-process">Return Process</a></li>
                 </ul>
             </div>
             <div>
                 <h2>Signup for newsletter</h2>
                 <div class="subs">
-                    <input type="text" placeholder="demo@example.com">
-                    <button>subscribe</button>
+                    <input type="text" placeholder="demo@example.com" id="your-email">
+                    <button aria-label="subscribe">subscribe</button>
                 </div>
                 <p>Join over 1,000 people who get free and fresh content delivered automatically each time we publish
                 </p>
@@ -322,6 +329,7 @@
         <div class="footer">Created with love by Aya</div>
         <!-- end bottom footer -->
     </div>
+    <script src="js/lazysizes.min.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
     <script src="js/general.js"></script>
     <script src="js/data.js"></script>

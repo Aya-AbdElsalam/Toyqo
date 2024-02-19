@@ -7,7 +7,9 @@ function drawCart() {
     (item, index) => {
       return `
         <tr>
-          <td><img src="${item.img}"></td>
+          <td><img  loading="lazy"  data-src="${
+            item.img
+          }" alt="item-cart" width="100%" height="auto" class="lazyload"></td>
           <td class="title "style="cursor: pointer" onclick="ItemId(${
             item.id
           })">${item.title}</td>

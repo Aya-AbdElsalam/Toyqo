@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Have questions or feedback? Get in touch with the team at toyqo via our contact us page. Whether you need assistance with an order, want to inquire about our products, or simply want to say hello, we're here to help! Reach out today and let's connect over a shared love for play and imagination." />
     <title>Toyqo | Contact us page</title>
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/all.min.css" rel="stylesheet" />
     <link href="css/css.css" rel="stylesheet" />
     <link href="css/contact.css" rel="stylesheet" />
-    <link rel="icon" href="photo/icon.png" type="image/x-icon" />
+    <link rel="icon" href="images/icon.webp" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,800&display=swap"
@@ -38,21 +40,21 @@
             <div class="logo"><span>T</span><span>o</span><span>y</span><span>q</span><span>o</span></div>
             <div class="pages">
                 <ul>
-                    <li><a href=" index.html">Home</a></li>
+                    <li><a href=" index.html" aria-label="home">Home</a></li>
                     <li>
-                        <a href=" shop.html">Shop</a>
+                        <a href=" shop.html" aria-label="shop">Shop</a>
                     </li>
                     <li>
-                        <a href=" about.html">About</a>
+                        <a href=" about.html" aria-label="about">About</a>
                     </li>
                     <li>
-                        <a href=" blog.html"> Blog</a>
+                        <a href=" blog.html" aria-label="blog"> Blog</a>
                     </li>
                     <li>
-                        <a href=" faq.html">FAQ</a>
+                        <a href=" faq.html" aria-label="faq">FAQ</a>
                     </li>
                     <li>
-                        <a href=" contact_us.html" class="active"> Contact</a>
+                        <a href=" contact_us.html" class="active" aria-label="contact"> Contact</a>
                     </li>
                 </ul>
             </div>
@@ -74,21 +76,21 @@
                         </div>
                     </li>
                     <li>
-                        <a href=" viewed.html"><i class="fa-solid fa-eye"></i></a>
+                        <a href=" viewed.html" aria-label="view-page"><i class="fa-solid fa-eye"></i></a>
                     </li>
                     <li>
-                        <a href=" cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href=" cart.html" aria-label="cart-page"> <i class="fa-solid fa-cart-shopping"></i></a>
                         <span class="itemsOfCart">0</span>
                     </li>
                 </ul>
             </div>
-            <button>
+            <button aria-label="menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-        <div class="search_container"> <input type="text" class="search" placeholder="search by name">
+        <div class="search_container"> <input type="text" class="search" placeholder="search by name" id="search">
         </div>
     </div>
     <div class="clearfix"></div>
@@ -116,12 +118,12 @@
         <div class="contact_section">
             <div class="form">
                 <h2>Tell Us Your Project</h2>
-                <form>
+                <form id="contact-us">
                     <input type="text" placeholder="Your name*" required>
                     <input type="text" placeholder="Email*" required>
                     <input type="text" placeholder="Subject*" required>
                     <textarea name="message" placeholder="Message"></textarea>
-                    <button value="Send A Mesaage">Send A Mesaage</button>
+                    <button value="Send A Mesaage" aria-label="send">Send A Mesaage</button>
                 </form>
             </div>
             <div class="contact_info">
@@ -183,17 +185,17 @@
             <div>
                 <h2>Information</h2>
                 <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Payment Methode</a></li>
-                    <li><a href="#">Product Warranty</a></li>
-                    <li><a href="#">Return Process</a></li>
+                    <li><a href="#" aria-label="terms">Terms & Conditions</a></li>
+                    <li><a href="#" aria-label="payment-methode">Payment Methode</a></li>
+                    <li><a href="#" aria-label="product-warranty">Product Warranty</a></li>
+                    <li><a href="#" aria-label="return-process">Return Process</a></li>
                 </ul>
             </div>
             <div>
                 <h2>Signup for newsletter</h2>
                 <div class="subs">
                     <input type="text" placeholder="demo@example.com">
-                    <button>subscribe</button>
+                    <button aria-label="subscribe">subscribe</button>
                 </div>
                 <p>Join over 1,000 people who get free and fresh content delivered automatically each time we publish
                 </p>
@@ -204,6 +206,7 @@
         <div class="footer">Created with love by Aya</div>
         <!-- end bottom footer -->
     </div>
+    <script src="js/lazysizes.min.js" async></script>
     <script src="js/data.js"></script>
     <script src="js/general.js"></script>
     <script src="js/search.js"></script>

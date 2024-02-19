@@ -4,7 +4,7 @@ document.querySelector(".blog").innerHTML = blog
     return `
       <div class="article_container">
             <div class="img">
-                <img src="${article.img}">
+                <img  loading="lazy" data-src="${article.img}" alt="article" width="100%" height="auto" class="lazyload">
             </div>
             <div class="info">
                 <p>${article.date} | ${article.owner}</p>

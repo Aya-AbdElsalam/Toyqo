@@ -5,7 +5,7 @@ let choosenArticle = blog.find((e) => {
 // draw article details in page
 document.querySelector(".blog_details").innerHTML = `
 <div class="img">
-                <img src="${choosenArticle.img}">
+                <img  loading="lazy" data-src="${choosenArticle.img}" alt="blog" width="100%" height="auto" class="lazyload">
             </div>
             <h2>${choosenArticle.title}</h2>
             <p>By ${choosenArticle.owner} | ${choosenArticle.date} |<span>${choosenArticle.no_comment} </span> COMMENTS</p>
@@ -72,12 +72,12 @@ function drawComment() {
         return `
         <div class="review_user">
           <div class="img">
-            <img src="photo/user.jpg">
+            <img  loading="lazy" data-src="images/user.webp" alt="review" width="100%" height="auto" class="lazyload">
           </div>
           <div class="comment">
             <h2>${e.name} - <span class="date">${e.date}</span></h2>
             <p>${e.review}</p>
-            <button onclick="removeComment(${e.id_comment})">delete</button>
+            <button onclick="removeComment(${e.id_comment})" aria-label="delete">delete</button>
           </div>
         </div>`;
       } else if (
@@ -87,7 +87,7 @@ function drawComment() {
         return `
         <div class="review_user">
           <div class="img">
-            <img src="photo/user.jpg">
+            <img  loading="lazy" data-src="images/user.webp" alt="review" width="100%" height="auto" class="lazyload">
           </div>
           <div class="comment">
             <h2>${e.name} - <span class="date">${e.date}</span></h2>

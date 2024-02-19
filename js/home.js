@@ -1,8 +1,8 @@
 //start landing page
 let landingPagesArray = [
-  "photo/slide4.jpg",
-  "photo/slide5.jpg",
-  "photo/slide6.jpg",
+  "images/slide4.webp",
+  "images/slide5.webp",
+  "images/slide6.webp",
 ];
 let bg = [
   "rgb(255 153 204 / 77%)",
@@ -64,13 +64,13 @@ FeaturedToy.length = 8;
 document.querySelector(".shop_section").innerHTML = FeaturedToy.map((e) => {
   return `
     <div class="item">
-                <img src="${e.img}">
+                <img  loading="lazy" data-src="${e.img}" alt="item" width="100%" height="auto" class="lazyload">
                 <div>
                     <h2 onclick="ItemId(${e.id})">${e.title}</h2>
                     <p>${e.price} EGP</p>
                     <p class="description">${e.description}
                     </p>
-                    <button onclick="addToCart(${e.id})">Add to cart</button>
+                    <button onclick="addToCart(${e.id})" aria-label="add-to-cart">Add to cart</button>
                 </div>
     </div>
     `;
@@ -88,7 +88,7 @@ document.querySelector(".blog").innerHTML = blog
     return `
       <div class="article_container">
             <div class="img">
-                <img src="${article.img}">
+                <img  loading="lazy" data-src="${article.img}" alt="article" width="100%" height="auto" class="lazyload">
             </div>
             <div class="info">
                 <p>${article.date} | ${article.owner}</p>
@@ -144,7 +144,7 @@ document.querySelector(".best_seller .slider .slide1").innerHTML = bestProduct
     return `
   <div class="item">
             <div class="img">
-              <img src=${e.img}>
+              <img  loading="lazy" data-src=${e.img} alt="best-seller" width="100%" height="auto" class="lazyload">
             </div>
             <div class="info">
               <h3 onclick="ItemId(${e.id})">${e.title}</h3>
@@ -161,7 +161,7 @@ document.querySelector(".best_seller .slider .slide2").innerHTML = bestProduct2
     return `
   <div class="item">
             <div class="img">
-              <img src=${e.img}>
+              <img  loading="lazy" data-src=${e.img}  alt="best-seller" width="100%" height="auto" class="lazyload">
             </div>
             <div class="info">
               <h3 onclick="ItemId(${e.id})">${e.title}</h3>
@@ -179,7 +179,7 @@ document.querySelector(".on_sale .slider .slide1").innerHTML = onSaleProduct
     return `
   <div class="item">
             <div class="img">
-              <img src=${e.img}>
+              <img  loading="lazy"  data-src=${e.img} alt="on-sale" width="100%" height="auto" class="lazyload">
             </div>
             <div class="info">
               <h3 onclick="ItemId(${e.id})">${e.title}</h3>
@@ -196,7 +196,7 @@ document.querySelector(".on_sale .slider .slide2").innerHTML = onSaleProduct2
     return `
   <div class="item">
             <div class="img">
-              <img src=${e.img}>
+              <img  loading="lazy" data-src=${e.img} alt="on-sale" width="100%" height="auto" class="lazyload">
             </div>
             <div class="info">
               <h3 onclick="ItemId(${e.id})">${e.title}</h3>
@@ -225,7 +225,6 @@ document.querySelectorAll(".best_seller i").forEach((e) => {
 const slide = document.querySelectorAll(".slider")[1];
 //icon scrolling
 let firstSlide = document.querySelectorAll(".slider >div")[0];
-console.log(firstSlide.clientWidth);
 let firstSlideWidth = firstSlide.clientWidth;
 document.querySelectorAll(".on_sale i").forEach((e) => {
   e.addEventListener("click", (e) => {

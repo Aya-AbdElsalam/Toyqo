@@ -42,7 +42,7 @@ input:-webkit-autofill:focus {
 
 .section-form .img {
     position: relative;
-    background-image: url(../photo/3.jpg);
+    background-image: url(../images/register.webp);
     flex-basis: 50%;
     background-size: cover;
     overflow: hidden;

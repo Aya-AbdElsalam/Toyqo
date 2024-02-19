@@ -8,13 +8,13 @@ function drawViewed() {
       if (e.idUser == localStorage.getItem("id")) {
         ViewedUser.push(e);
         return `
-        <div class="item">
-          <img src="${e.img}">
+        <div class="item" >
+          <img  loading="lazy" data-src="${e.img}" alt="${e.title}" width="100%" height="auto" class="lazyload">
             <span class="remove" onclick="removeFromViewed(${e.id},${e.idUser})">Remove</span>
             <h2 onclick="ItemId(${e.id})">${e.title}</h2>
             <p>${e.price} EGP</p>
             <p>${e.describtion}</p>
-          <button onclick="addToCart(${e.id})">Add to cart</button>
+          <button onclick="addToCart(${e.id})" aria-label="add-to-cart">Add to cart</button>
         </div>    
     `;
       }

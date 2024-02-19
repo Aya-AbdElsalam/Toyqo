@@ -2,13 +2,13 @@
 document.querySelector(".shop_section").innerHTML = ToyKidsAll.map((e) => {
   return `
     <div class="item">
-                <img src="${e.img}">
+                <img data-src="${e.img}" alt="${e.title}" class="lazyload">
                 <div>
                 <h2 onclick="ItemId(${e.id})">${e.title}</h2>
                 <p>${e.price} EGP</p>
                 <p class="description">${e.description}
                 </p>
-                <button onclick="addToCart(${e.id})">Add to cart</button>
+                <button onclick="addToCart(${e.id})" aria-label="add-to-cart">Add to cart</button>
                                 </div>
 
             </div>

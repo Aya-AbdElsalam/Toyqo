@@ -321,7 +321,7 @@ img {
 
 #overlay {
     display: none;
-    background: url(../photo/1.jpg);
+    background: url(../images/1.webp);
     position: absolute;
     width: 25%;
     height: 35%;

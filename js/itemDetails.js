@@ -16,9 +16,16 @@ if (viewedItem) {
 }
 localStorage.setItem("viewed", JSON.stringify(viewed));
 // draw item details in page
+document
+  .querySelector('meta[name="description"]')
+  .setAttribute(
+    "content",
+    `Discover the magic of ${choosenItem.title} on toyqo. Dive into the enchanting world of play with detailed descriptions, vibrant images, and customer reviews. From educational value to entertainment, explore all the features and benefits of this must-have toy. Elevate playtime to new heights with ${choosenItem.title} - shop now and ignite your child's imagination`
+  );
+
 ItemDetailsDom.innerHTML = `
   <div class="img image-container" id="image-container">
-    <img src="${choosenItem.img}"  id="product-image" >
+    <img  loading="lazy" data-src="${choosenItem.img}"  id="product-image" alt="${choosenItem.title}" width="100%" height="auto" class="lazyload">
   </div>
   <div id="mouse-overlay"></div>
   <div id="overlay"></div>
@@ -28,7 +35,7 @@ ItemDetailsDom.innerHTML = `
     <p class="available">Availability: <span>In Stock</span></p>
     <p>${choosenItem.description}</p>
     <!-- <p class="size"><span></span></p> -->
-    <button onclick="addToCart(${choosenItem.id})"> Add to cart</button>
+    <button onclick="addToCart(${choosenItem.id})" aria-label="add-to-cart"> Add to cart</button>
   </div>`;
 document.querySelector(
   "#overlay"
@@ -159,12 +166,12 @@ function drawComment() {
         return `                   
         <div class="review_user">
           <div class="img">
-            <img src="photo/user.jpg">
+            <img  loading="lazy"  data-src="images/user.webp" alt="review" width="100%" height="auto" class="lazyload">
           </div>
           <div class="comment">
             <h2>${e.name} - <span class="date">${e.date}</span></h2>
             <p>${e.review}</p>
-            <button onclick="removeComment(${e.id_comment})">delete</button>
+            <button onclick="removeComment(${e.id_comment})" aria-label="delete">delete</button>
           </div>
         </div>`;
       } else if (
@@ -174,7 +181,7 @@ function drawComment() {
         return `
         <div class="review_user">
           <div class="img">
-            <img src="photo/user.jpg">
+            <img  loading="lazy" data-src="images/user.webp" alt="review" width="100%" height="auto" class="lazyload">
           </div>
           <div class="comment">
             <h2>${e.name} - <span class="date">${e.date}</span></h2>
