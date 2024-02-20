@@ -22,7 +22,6 @@ document
     "content",
     `Discover the magic of ${choosenItem.title} on toyqo. Dive into the enchanting world of play with detailed descriptions, vibrant images, and customer reviews. From educational value to entertainment, explore all the features and benefits of this must-have toy. Elevate playtime to new heights with ${choosenItem.title} - shop now and ignite your child's imagination`
   );
-
 ItemDetailsDom.innerHTML = `
   <div class="img image-container" id="image-container">
     <img  loading="lazy" data-src="${choosenItem.img}"  id="product-image" alt="${choosenItem.title}" width="100%" height="auto" class="lazyload">
