@@ -32,6 +32,7 @@
 }
 
 .shop_section .item button {
+    background-color: #3B3B3B;
     position: absolute;
     left: 0;
     bottom: 0;
