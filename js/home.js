@@ -105,15 +105,6 @@ function articleId(id) {
   window.location = " articleDetails.html";
 }
 //brands
-let w;
-function resizeIcon() {
-  document.querySelectorAll(".carousel img").forEach((e) => {
-    e.style.height = `${e.width}px`;
-    w = e.width;
-  });
-}
-resizeIcon();
-window.addEventListener("resize", resizeIcon);
 const carousal = document.querySelector(".carousel");
 //icon scrolling
 let firstimg = document.querySelectorAll(".carousel img")[0];

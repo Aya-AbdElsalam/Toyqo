@@ -50,11 +50,15 @@
     background-color: #7a7a7a7a;
     width: 50px;
     height: 50px;
-    line-height: 50px;
+    line-height: 66px;
     color: white;
-    font-size: 41px;
     font-family: cursive;
     cursor: pointer;
+}
+
+.landing-page .left-arrow i,
+.landing-page .right-arrow i {
+    font-size: 40px;
 }
 
 .landing-page .left-arrow:hover,
@@ -430,7 +434,8 @@
 }
 
 .carousel img {
-    width: calc(100% / 9);
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     margin-left: 14px;
     border-radius: 50%;
@@ -457,21 +462,9 @@
 }
 
 .brand i:first-child {
-    left: -35px;
+    left: -0px;
 }
 
 .brand i:last-child {
-    right: -35px;
-}
-
-@media (max-width: 950px) {
-    .carousel img {
-        width: calc(100% / 5);
-    }
-}
-
-@media (max-width: 600px) {
-    .carousel img {
-        width: calc(100% / 4);
-    }
+    right: -0px;
 }
