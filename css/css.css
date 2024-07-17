@@ -126,10 +126,9 @@ body {
 .header {
     width: 100%;
     justify-content: space-between;
-    height: 76px;
     z-index: 1000;
     background-color: white;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     display: flex;
     padding-top: 30px;
@@ -217,11 +216,14 @@ body {
 
 .header .icons .user div:first-of-type.open {
     display: block;
+    position: fixed;
 }
 
 .header .icons .user div:nth-of-type(2).openname {
     display: block;
-    top: -18px
+    position: fixed;
+    z-index: 5000;
+    top: 13px
 }
 
 .header .icons .user div span {
@@ -413,10 +415,13 @@ i.open {
 @media (max-width: 400px) {
     .header .icons .user div {
         transform: translate(8%, 41%);
+        top: 43px !important;
     }
 
     .header .icons {
         position: absolute;
+        z-index: 5000;
+        border-top: 1px solid lightgray;
         right: 0;
         width: 100%;
         top: 73px;
@@ -435,7 +440,7 @@ i.open {
     }
 
     .search_container.open {
-        margin-top: 35px;
+        margin-top: 28px;
     }
 
     .header .pages ul li,

@@ -65,8 +65,7 @@ document.querySelector(".fa-magnifying-glass").addEventListener("click", () => {
 //hide cart if no register
 if (localStorage.getItem("username")) {
 } else {
-  document.querySelector(".header .icons ul li:nth-of-type(3)").style.display =
-    "none";
+ 
   document.querySelector(".header .icons ul li:nth-of-type(4)").style.display =
     "none";
 }

@@ -79,11 +79,17 @@
         <div class="form">
           <h2>Log in your account</h2>
           <form id="login">
-            <div style="text-align: start;padding: 0px 0 0px 13px;">
-              <label for="#username">UserName...</label>
-              <input type="text" placeholder=" " id="username">
-              <label for="#password">password...</label>
-              <input type="password" placeholder=" " id="password">
+            <div
+              style="text-align: start;padding: 0px 0 0px 13px; display: flex; flex-direction: column; gap: 10px; width: 100%;">
+              <div>
+                <label for="#username">UserName</label>
+                <input type="text" placeholder=" " id="username">
+              </div>
+              <div>
+                <label for="#password">password</label>
+                <input type="password" placeholder=" " id="password">
+              </div>
+
               <p class="wrong">user name or password is wrong</p>
               <p class="alert">please fill data</p>
             </div>
@@ -102,13 +108,22 @@
         <div class="form">
           <h2>Register</h2>
           <form id="register-page">
-            <div style="text-align: start;padding: 0px 0 0px 13px;">
-              <label for="#usernameRegister">UserName...</label>
-              <input type="text" placeholder=" " id="usernameRegister">
-              <label for="#email">Email...</label>
-              <input type="text" placeholder="" id="email">
-              <label for="#passwordRegister">password...</label>
-              <input type="password" placeholder=" " id="passwordRegister">
+            <div
+              style="text-align: start;padding: 0px 0 0px 13px; display: flex; flex-direction: column; gap: 10px; width: 100%;">
+
+              <div>
+                <label for="#usernameRegister">UserName</label>
+                <input type="text" placeholder=" " id="usernameRegister">
+              </div>
+              <div>
+                <label for="#email">Email</label>
+                <input type="text" placeholder="" id="email">
+              </div>
+              <div>
+                <label for="#passwordRegister">password</label>
+                <input type="password" placeholder=" " id="passwordRegister">
+              </div>
+
               <p class="alert">please fill data</p>
               <p class="wrong">the username is found</p>
               <p class="alertInvalid">Invalid email</p>
